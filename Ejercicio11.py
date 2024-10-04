@@ -1,0 +1,12 @@
+from Funcion11 import*
+Color=str(input("Ingrese el color del Vehículo: "))
+Marca=str(input("Ingrese la marca del vehículo: "))
+Modelo=str(input("Ingrese el modelo del vehículo: "))
+Numero_de_puertas=int(input("Ingrese el numero de puerta que tiene el vehículo: "))
+Numero_de_matricula=str(input("Ingrese el numero de matricula: "))
+V=Vehiculo(Color,Marca,Modelo,Numero_de_puertas,Numero_de_matricula)
+V.Mostrar_Color()
+V.Mostrar_Marca()
+V.Mostrar_Modelo()
+V.Mostrar_Numero_de_puertas()
+V.Mostrar_Numero_de_matricula()

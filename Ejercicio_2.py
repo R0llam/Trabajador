@@ -1,19 +1,10 @@
-nom=str(input("ingrese el nombre del trabajador: "))
-montoV=float(input("ingrese el monto de venta: "))
-AS=float(input("ingrese los años de servicio: "))
-if(montoV<5000):
-	comision=montoV * 0.05
-elif(montoV>=5000 and montoV<10000):
-	comision=montoV * 0.07
-elif(montoV>=10000 and montoV<100000):
-	comision=montoV * 0.08
-else:
-	comision=montoV * 0.10
-if(AS>7 and AS<=15):
-	comisiont=comision * 2
-elif(AS>15):
-	extra=(AS - 15) * 500
-	comisiont=comision * 2 + extra
-else:
-	comisiont=0
-print("la comision del empleado",nom,"es: ",comisiont)
+from Funcion_2 import*
+Nombre_del_empleado=str(input("Ingrese el nombre del empleado: "))
+Sueldo_base=float(input("Ingrese el sueldo base del empleado: "))
+Numero_de_horas_trabajadas=float(input("Ingrese el numero de horas trabajadas durante la semana: "))
+Valor_de_la_hora=float(input("Ingrese el valor de la hora: "))
+PPHE=Pago_por_horas_extra(Numero_de_horas_trabajadas,Valor_de_la_hora)
+P_n=Pago_neto(PPHE,Numero_de_horas_trabajadas,Valor_de_la_hora,Sueldo_base)
+print("El Nombre del empleado es: ",Nombre_del_empleado)
+print("El pago por horas extra es: ",PPHE)
+print("El sueldo neto del empleado",Nombre_del_empleado,"es: ",P_n)
